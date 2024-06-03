@@ -20,7 +20,7 @@ require("dotenv").config();
 app.use(express.json({ limit: "10mb" }));
 // Enable CORS for all routes
 app.use(cors({
-  origin: 'http://localhost:3000',  //Specify the origin you want to allow
+  origin: 'https://www.craigkanyemba.africa, https://craigkanyemba.africa',  //Specify the origin you want to allow
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify the methods you want to allow
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'], // Specify the headers you want to allow
   credentials: true // Allow cookies to be sent with requests
