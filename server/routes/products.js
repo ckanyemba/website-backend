@@ -5,9 +5,9 @@ const cloudinary = require("../utils/cloudinary");
 
 const router = express.Router();
 
-//CREATE
+//CREATE PRODUCTS
 router.post("/", isAdmin, async (req, res) => {
-  const { name, type, desc, price, image } = req.body;
+  const { name, type, desc, date, price, ebook, image } = req.body;
 
   try {
     if (image) {
@@ -20,7 +20,10 @@ router.post("/", isAdmin, async (req, res) => {
           name,
           type,
           desc,
+          link,
+          date,
           price,
+          ebook,
           image: uploadRes,
         });
 
